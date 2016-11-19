@@ -35,6 +35,10 @@ Changes by iskandar introduce improved support for using DSNs to connect to Redi
 * Call beforePerform hook before retrieivng an instance of the job class (allows beforePerform to cancel a job with DontPerform before initialising your application)
 * Add `beforeEnqueue` hook, called before a job is placed on a queue
 
+## [1.2.1] - 2016-11-20
+### Changed
+- Improved SIGNAL handling
+
 ## 1.2 (2012-10-13) ##
 
 **Note:** This release is largely backwards compatible with php-resque 1.1. The next release will introduce backwards incompatible changes (moving from Redisent to Credis), and will drop compatibility with PHP 5.2.
@@ -80,3 +84,6 @@ Changes by iskandar introduce improved support for using DSNs to connect to Redi
 ## 1.0 (2010-04-18) ##
 
 * Initial release
+
+
+[1.2.1]: https://bitbucket.org/alfaluck/emf-mq/branches/compare/v.0.0.2%0Dv.0.0.3

@@ -1,6 +1,4 @@
 <?php
-declare(ticks = 1);
-
 /**
  * Resque worker that handles checking queues for jobs, fetching them
  * off the queues, running them and handling the result.
@@ -223,6 +221,8 @@ class Resque_Worker
 
 			$this->child = null;
 			$this->doneWorking();
+
+            pcntl_signal_dispatch();
 		}
 
 		$this->unregisterWorker();
@@ -346,7 +346,7 @@ class Resque_Worker
 			return;
 		}
 
-		pcntl_signal(SIGTERM, array($this, 'shutDownNow'));
+		pcntl_signal(SIGTERM, array($this, 'shutdown'));
 		pcntl_signal(SIGINT, array($this, 'shutDownNow'));
 		pcntl_signal(SIGQUIT, array($this, 'shutdown'));
 		pcntl_signal(SIGUSR1, array($this, 'killChild'));
