@@ -183,7 +183,9 @@ class Resque_Worker
 					usleep($interval * 1000000);
 				}
 
-				continue;
+				pcntl_signal_dispatch();
+
+                continue;
 			}
 
 			$this->logger->log(Psr\Log\LogLevel::NOTICE, 'Starting work on {job}', array('job' => $job));
