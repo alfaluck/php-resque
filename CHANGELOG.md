@@ -97,5 +97,5 @@ Changes by iskandar introduce improved support for using DSNs to connect to Redi
 
 * Initial release
 
-[Unreleased]: https://github.com/alfaluck/php-resque/compare/v.1.2.2...HEAD
+[Unreleased]: https://github.com/alfaluck/php-resque/compare/v.1.2.2...develop
 [1.2.2]: https://github.com/alfaluck/php-resque/compare/v.1.2.1...v.1.2.2
